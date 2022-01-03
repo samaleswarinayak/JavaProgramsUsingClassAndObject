@@ -10,8 +10,10 @@ class Complex
 	{
 		System.out.println("Enter the real and imaginary part");
 		Scanner sc = new Scanner(System.in);
-		real = sc.nextFloat();
-		imaginary = sc.nextFloat();
+			real = sc.nextFloat();
+			imaginary = sc.nextFloat();
+		
+		
 	}
 	void addition(Complex ob1, Complex ob2)
 	{
@@ -30,7 +32,7 @@ class Complex
 class ComplexAddition
 {
 	public static void main(String args[])
-	{
+	{	
 		Complex ob1 = new Complex();
 		Complex ob2 = new Complex();
 		Complex ob3 = new Complex();

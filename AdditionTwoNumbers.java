@@ -7,10 +7,11 @@ class AdditionTwoNumbers
 	
 	void input()
 	{
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter values");
-		no1= sc.nextInt();
-		no2= sc.nextInt();
+		try (Scanner sc = new Scanner(System.in)) {
+			System.out.println("Enter values");
+			no1= sc.nextInt();
+			no2= sc.nextInt();
+		}
 	}
 	void add()
 	{
@@ -21,10 +22,11 @@ class AdditionTwoNumbers
 		System.out.println(res+" is the sum of "+no1+" and "+no2);
 	}
 	public static void main(String args[])
-	{
-		DemoClass ob = new DemoClass();//Object is created
+	{	
+		AdditionTwoNumbers ob = new AdditionTwoNumbers();//Object is created
 		ob.input();
 		ob.add();
 		ob.show();
 	}
 }
+
