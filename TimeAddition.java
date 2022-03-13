@@ -8,10 +8,11 @@ class Time
 	void input()
 	{
 		System.out.println("Enter the  hour min and sec ");
-		Scanner sc = new Scanner(System.in);
-		hour = sc.nextInt();
-		min = sc.nextInt();
-		sec = sc.nextInt();
+		try (Scanner sc = new Scanner(System.in)) {
+			hour = sc.nextInt();
+			min = sc.nextInt();
+			sec = sc.nextInt();
+		}
 	}
 	void compute(Time ob1, Time ob2)
 	{

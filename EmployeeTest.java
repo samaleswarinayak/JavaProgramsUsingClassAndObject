@@ -8,13 +8,14 @@ class Employee
 	void input()
 	{
 		System.out.println("Enter the basic of employee");
-		Scanner sc = new Scanner(System.in);
-		basic = sc.nextFloat();
-		System.out.println("enter the da hra ta and tax of employee in percentile");
-		da = sc.nextFloat();
-		hra = sc.nextFloat();
-		ta = sc.nextFloat();
-		tax = sc.nextFloat();
+		try (Scanner sc = new Scanner(System.in)) {
+			basic = sc.nextFloat();
+			System.out.println("enter the da hra ta and tax of employee in percentile");
+			da = sc.nextFloat();
+			hra = sc.nextFloat();
+			ta = sc.nextFloat();
+			tax = sc.nextFloat();
+		}
 	}
 	void calculate()
 	{		gross_salary= basic + (basic * (da/100)) + (basic * (hra/100)) + (basic * (ta/100)) - (basic * (tax/100));

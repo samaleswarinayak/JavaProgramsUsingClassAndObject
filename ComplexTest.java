@@ -9,9 +9,10 @@ class Complex
 	void input()
 	{
 		System.out.println("Enter the real and imaginary part");
-		Scanner sc = new Scanner(System.in);
-		real = sc.nextFloat();
-		imaginary = sc.nextFloat();
+		try (Scanner sc = new Scanner(System.in)) {
+			real = sc.nextFloat();
+			imaginary = sc.nextFloat();
+		}
 	}
 	void addition(Complex ob1, Complex ob2)
 	{

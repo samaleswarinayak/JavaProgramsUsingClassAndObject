@@ -9,11 +9,12 @@ class student
 	void input()
 	{
 		System.out.println("Enter the information of student (Name , roll , sic, mark)");
-		Scanner sc = new Scanner(System.in);
-		name = sc.next();
-		roll = sc.nextInt();
-		sic =  sc.next();
-		mark = sc.nextFloat();
+		try (Scanner sc = new Scanner(System.in)) {
+			name = sc.next();
+			roll = sc.nextInt();
+			sic =  sc.next();
+			mark = sc.nextFloat();
+		}
 	}
 	void display()
 	{
