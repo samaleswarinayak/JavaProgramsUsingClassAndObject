@@ -3,7 +3,7 @@
 import java.util.*;
 class QueueObject
 {
-	static java.util.Scanner sc= new Scanner(System.in);
+	static Scanner sc= new Scanner(System.in);
 	static int rear=-1,front=-1;
 	static int arr[]=new int[50];
 	void insert()

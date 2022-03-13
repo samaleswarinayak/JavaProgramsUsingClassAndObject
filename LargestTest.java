@@ -52,15 +52,16 @@ class LargestTest
 		Largest ob2 = new Largest();
 		Largest ob3 = new Largest();
 		Largest ob4 = new Largest();
-		Scanner sc = new Scanner(System.in);
-		System.out.println("enter first number ");
-		num = sc.nextInt();
-		ob1.input(num);
-		System.out.println("enter second number ");
-		num = sc.nextInt();
-		ob2.input(num);
-		System.out.println("enter third number ");
-		num = sc.nextInt();
+		try (Scanner sc = new Scanner(System.in)) {
+			System.out.println("enter first number ");
+			num = sc.nextInt();
+			ob1.input(num);
+			System.out.println("enter second number ");
+			num = sc.nextInt();
+			ob2.input(num);
+			System.out.println("enter third number ");
+			num = sc.nextInt();
+		}
 		ob3.input(num);
 		ob4.large(ob1,ob2,ob3);
 		ob4.show();	
